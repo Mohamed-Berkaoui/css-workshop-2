@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --violet: rgb(255, 60, 255);
+}
+body{
+    font-family: "Telex", sans-serif;
+    max-width: 100%;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 80px;
+    height: 80px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.315);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    z-index: 2000;
+
+}
+
+nav>ul{
+    display: flex;
+    list-style-type: none;
+    gap: 60px;
+
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(65, 65, 65);
+
+}
+
+.dropdown{
+   visibility: hidden;
+   transform: translateY(-20px);
+   opacity: 0;
+   display: block;
+position: absolute;
+list-style-type: none;
+background-color:white;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.432);
+padding: 10px 30px;
+right: 5px;
+line-height: 50px;
+
+transition:  0.2s  ;
+
+
+}
+.dropdown-container{
+    position: relative;
+}
+
+.dropdown-container:hover>.dropdown{
+visibility: visible;
+transform: translateY(0);
+opacity: 1;
+}
+.dropdown li:hover{
+    color: rgb(177, 177, 236);
+    transition: 0.2s;
+    cursor: pointer
+}
+
+
+section{
+    height: 100vh;
+    min-height: 500px;
+background-image: url(https://c4.wallpaperflare.com/wallpaper/882/639/735/girl-wings-dress-wallpaper-preview.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+flex-direction: column;
+gap: 50px;
+justify-content: center;
+align-items: center;
+color: white;
+position: relative;
+}
+section h1{
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: capitalize;
+
+    position: relative;
+    z-index: 2;
+
+}
+section h1 span{
+    color: var(--violet);
+}
+
+section p{
+    font-size: 1.5rem;
+    position: relative;
+    z-index: 2;
+}
+section button{
+    width: 180px;
+    height: 60px;
+    color: white;
+    font-weight: 300;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    background-color:var(--violet);
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    z-index: 2;
+}
+section::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient( to right,rgb(2, 2, 194),var(--violet));
+    opacity: 0.3;
+    filter: blur(10px);
+}
+#blur{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    filter: blur(50px);
+}
